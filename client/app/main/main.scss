@@ -1,5 +1,9 @@
+body{
+	font-size:100%;
+}
 #logo{
     margin-top:40px;
+    margin-bottom:40px;
 }
 
 .footer {
@@ -7,4 +11,16 @@
     padding: 30px 0;
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
+}
+.btn-primary {
+	padding:40px;
+	font-weight:900;
+	font-size:2.6em;
+	background-color:#d9591e;
+	border-color:#484848;
+	&:hover{
+		background-color:#f26522;
+		
+	}
+
 }
