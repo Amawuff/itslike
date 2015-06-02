@@ -6,7 +6,8 @@ angular.module('itslikeApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ui.slider'
+  'ui.slider',
+  'spotify'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
