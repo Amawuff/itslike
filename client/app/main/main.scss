@@ -18,9 +18,11 @@ body{
 	font-size:2.6em;
 	background-color:#d9591e;
 	border-color:#484848;
-	&:hover{
+	
+	&:hover, &:active, &:focus{
 		background-color:#f26522;
-		
+		border-color:#484848;
+		outline:0;
 	}
 
 }
