@@ -6,6 +6,8 @@ angular.module('itslikeApp')
         $scope.originaltrack = "";
         $scope.artist = "";
         $scope.track = "";
+        $scope.results =[];
+        $scope.status ="";
 
         $scope.processData = function(event) {
             console.log("LOL CLICK!");
@@ -16,7 +18,15 @@ angular.module('itslikeApp')
 
             Spotify.search('artist:' + $scope.artist + ' track:' + $scope.track, 'track')
             	.then(function(data) {
-                    	console.log(data);
+                    console.log(data)
+                        if(data.tracks.items.length==0){
+                            $scope.status="NO MATCHING TRACKS FOUND";
+                            $scope.results =[];
+                        }else{
+                    	$scope.results= data.tracks.items;
+                        $scope.status="Found "+$scope.results.length+" matching tracks! Which one did you want?";
+                        }
+                        
                 })
                 //non angular service way
                 // $.ajax({

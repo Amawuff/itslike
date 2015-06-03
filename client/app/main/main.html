@@ -44,6 +44,20 @@
             <br/>
             <strong>TempoMod:</strong> {{tempo}}
             <br/>
+            <strong>Status:</strong> {{status}}
+            <br/>
+            <strong>Results:</strong><br/>
+            <span ng-repeat="result in results">
+                <img ng-src="{{result.album.images[1].url}}"/><br/> 
+                Song: {{result.name}}<br/>
+                Artists:
+                <span ng-repeat="artist in result.artists">
+                    {{artist.name}}
+                </span>
+                <br/>
+                Album: {{result.album.name}}<br/><br/>
+            </span>
+            
         </p>
     </div>
 </div>
