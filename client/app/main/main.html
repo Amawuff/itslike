@@ -48,14 +48,7 @@
             <br/>
             <strong>Results:</strong><br/>
             <span ng-repeat="result in results">
-                <img ng-src="{{result.album.images[1].url}}"/><br/> 
-                Song: {{result.name}}<br/>
-                Artists:
-                <span ng-repeat="artist in result.artists">
-                    {{artist.name}}
-                </span>
-                <br/>
-                Album: {{result.album.name}}<br/><br/>
+                <spotify-tile result="result"></spotify-tile>
             </span>
             
         </p>

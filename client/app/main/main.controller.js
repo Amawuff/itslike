@@ -28,18 +28,7 @@ angular.module('itslikeApp')
                         }
                         
                 })
-                //non angular service way
-                // $.ajax({
-                //     url: 'https://api.spotify.com/v1/search',
-                //     data: {
-                //         q: 'artist:'+$scope.artist+' track:'+$scope.track,
-                //         type: 'track'
-                //     },
-                //     success: function(response) {
-                //         console.log(response);
-                //     }
-                // });
-
+                
 
 
         };
