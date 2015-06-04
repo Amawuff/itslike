@@ -11,6 +11,11 @@
                                 <input type="text" class="form-control" id="track" ng-model="originaltrack" placeholder="Artist - Song">
                                 <h5 class="pull-right">but...</h5>
                             </div>
+                            <div class="row">
+                                <span ng-repeat="result in results">
+                                     <spotify-tile result="result"></spotify-tile>
+                                </span>
+                            </div>
                             <div class="row well well-sm">
                                 <div class="col-xs-2 text-center slider-label">
                                     Slower
@@ -46,11 +51,8 @@
             <br/>
             <strong>Status:</strong> {{status}}
             <br/>
-            <strong>Results:</strong><br/>
-            <span ng-repeat="result in results">
-                <spotify-tile result="result"></spotify-tile>
-            </span>
-            
+            <strong>Results:</strong>
+            <br/>
         </p>
     </div>
 </div>
