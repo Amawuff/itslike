@@ -9,14 +9,14 @@
                             <div class="row">
                                 <h2>It's like:</h2>
                                 <input type="text" class="form-control" id="track" ng-model="originaltrack" placeholder="Artist - Song">
-                                <h5 class="pull-right">but...</h5>
                             </div>
-                            <div class="row">
+                            <div class="row hidden song-results">
+                                  <h5>{{status}}</h5>
                                 <span ng-repeat="result in results">
                                      <spotify-tile result="result"></spotify-tile>
                                 </span>
                             </div>
-                            <div class="row well well-sm">
+                            <div class="row well well-sm hidden sliders">
                                 <div class="col-xs-2 text-center slider-label">
                                     Slower
                                 </div>
@@ -27,8 +27,8 @@
                                     Faster
                                 </div>
                             </div>
-                            <div class="col-xs-12 text-center">
-                                <button type="submit" class="btn btn-primary" ng-click="processData($event)">IT'S LIKE THAT</button>
+                            <div class="col-xs-12 text-center btn-holder">
+                                <button type="submit" class="btn btn-primary" ng-click="processData($event)">DO IT!</button>
                             </div>
                         </div>
                     </form>

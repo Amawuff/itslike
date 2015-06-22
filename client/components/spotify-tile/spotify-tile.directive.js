@@ -26,12 +26,17 @@ angular.module('itslikeApp')
                         audiohandler.audioClick();
                         scope.audioObject = new Audio(songurl);
                         scope.audioObject.play();
+                        scope.audioObject.onended=function(){
+$(event.target).removeClass('playing');
+                        };
                         $(event.target).addClass('playing');
+                        $()
                     }
 
                 }
-
+               
                 
+
 
                 function callback(){
                     if(justClicked){

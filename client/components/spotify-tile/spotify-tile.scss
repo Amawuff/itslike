@@ -5,9 +5,18 @@
 	border-radius:15px;
 	background-color:#fff;
 	padding-left:0px;
-	
+	&:hover{
+		background-color: #666;
+		.album-art{
+			border-color: #666;
+		}
+	}
 	
 }
+
+
+	
+
 .album-art{
 		border:5px solid #fff;
 	&:hover{
@@ -32,3 +41,4 @@
 	color:#484848;
 
 }
+
